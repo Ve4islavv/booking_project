@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="add alembic and create db">
-      <change afterPath="$PROJECT_DIR$/app/booking/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/booking/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/booking/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/hotels/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/rooms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/rooms/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/models.py" afterDir="false" />
+    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="version with db_depends.py">
+      <change afterPath="$PROJECT_DIR$/app/booking/repo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repo/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/backend/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/backend/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/hotels/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/backend/db_depends.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/users.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/booking/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/router.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +70,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/repo" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/users" />
       <recent name="$PROJECT_DIR$/rooms" />
       <recent name="$PROJECT_DIR$/hotels" />
-      <recent name="$PROJECT_DIR$/booking" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,7 +115,8 @@
       <workItem from="1771496373127" duration="175000" />
       <workItem from="1771496797581" duration="734000" />
       <workItem from="1771497546523" duration="97000" />
-      <workItem from="1771497673371" duration="2078000" />
+      <workItem from="1771497673371" duration="3480000" />
+      <workItem from="1771504990091" duration="665000" />
     </task>
     <task id="LOCAL-00001" summary="add alembic and create db">
       <option name="closed" value="true" />
@@ -145,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771431652846</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="version with db_depends.py">
+      <option name="closed" value="true" />
+      <created>1771503594923</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771503594923</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +161,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add alembic and create db" />
-    <option name="LAST_COMMIT_MESSAGE" value="add alembic and create db" />
+    <MESSAGE value="version with db_depends.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="version with db_depends.py" />
   </component>
 </project>
