@@ -12,3 +12,4 @@ class Users(Base):
     hashed_password = Column(String, nullable=False)
 
     bookings = relationship('app.booking.models.Booking', back_populates='user')
+

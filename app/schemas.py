@@ -1,8 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from datetime import date
 
 
-class CreateBooking(BaseModel):
+class SCreateBooking(BaseModel):
     user_id: int
     room_id: int
     date_from: date
@@ -12,6 +12,6 @@ class CreateBooking(BaseModel):
     class Config:
         from_attributes = True
 
-class CreateUser(BaseModel):
-    username: str
+class SCreateUser(BaseModel):
+    username: EmailStr
     password: str

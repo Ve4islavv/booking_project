@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="version with db_depends.py">
-      <change afterPath="$PROJECT_DIR$/app/booking/repo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repo/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hotels/repo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hotels/routers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rooms/repo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rooms/routers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/token.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/repo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/booking/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/booking/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/booking/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repo/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repo/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="c6a4146e81dfbf8c2594d9bff3e4916b59f20987" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="McpProjectServerCommands">
