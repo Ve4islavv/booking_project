@@ -7,6 +7,10 @@ class CreateBooking(BaseModel):
     room_id: int
     date_from: date
     date_to: date
+    price: int
+
+    class Config:
+        from_attributes = True
 
 class CreateUser(BaseModel):
     username: str

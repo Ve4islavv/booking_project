@@ -3,10 +3,11 @@ from typing import Optional
 from fastapi import FastAPI, Query
 from starlette import status
 from app.schemas import CreateBooking
-from app.routers.users import router as user_router
+from app.models import Booking, Users, Rooms, Hotels
+from app.booking.router import router as router_booking
 
 app = FastAPI()
-app.include_router(user_router)
+app.include_router(router_booking)
 
 @app.get("/")
 async def root():

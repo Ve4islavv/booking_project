@@ -6,7 +6,6 @@ from os.path import abspath, dirname
 
 from alembic import context
 from app.backend.db import Base, DATABASE_URL
-from app.hotels.models import Hotels
 
 sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
 

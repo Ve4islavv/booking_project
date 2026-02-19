@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FastAPIProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/backend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/backend/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/hotels/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_main.http" afterDir="false" />
+    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="add alembic and create db">
+      <change afterPath="$PROJECT_DIR$/app/booking/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/booking/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/booking/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hotels/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rooms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rooms/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/backend/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/backend/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hotels/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/backend/db_depends.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;FastAPI.FastAPIProject.executor&quot;: &quot;Debug&quot;,
+    &quot;FastAPI.FastAPIProject.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -81,6 +83,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/users" />
+      <recent name="$PROJECT_DIR$/rooms" />
+      <recent name="$PROJECT_DIR$/hotels" />
+      <recent name="$PROJECT_DIR$/booking" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,11 +123,47 @@
       <option name="presentableId" value="Default" />
       <updated>1771408193426</updated>
       <workItem from="1771408194436" duration="9717000" />
-      <workItem from="1771425748055" duration="3355000" />
+      <workItem from="1771425748055" duration="16365000" />
+      <workItem from="1771496373127" duration="175000" />
+      <workItem from="1771496797581" duration="734000" />
+      <workItem from="1771497546523" duration="97000" />
+      <workItem from="1771497673371" duration="2078000" />
     </task>
+    <task id="LOCAL-00001" summary="add alembic and create db">
+      <option name="closed" value="true" />
+      <created>1771431643317</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771431643318</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add alembic and create db">
+      <option name="closed" value="true" />
+      <created>1771431652846</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771431652846</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add alembic and create db" />
+    <option name="LAST_COMMIT_MESSAGE" value="add alembic and create db" />
   </component>
 </project>
