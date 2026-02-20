@@ -1,9 +1,9 @@
 from fastapi import HTTPException
 from pydantic.v1 import EmailStr
-
-from sqlalchemy import select
+from sqlalchemy import select, insert, delete
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
+from app.backend.db import async_session_maker
 
 
 class BaseRepo:
@@ -25,6 +25,26 @@ class BaseRepo:
         return result
 
 
+    @classmethod
+    async def get_one_or_none(cls, **filter_by):
+        async with async_session_maker() as session:
+            query = select(cls.model).filter_by(**filter_by)
+            result = await session.scalar(query)
+            return result
+
+
+    @classmethod
+    async def add(cls, **data):
+        async with async_session_maker() as session:
+            query = insert(cls.model).values(**data).returning(cls.model.id)
+            await session.execute(query)
+            await session.commit()
+
+
+    async def delete(cls, email: EmailStr):
+        async with async_session_maker() as session:
+            await session.execute(delete(cls.model).where(cls.model.email == email))
+            await session.commit()
 
 
 

@@ -1,10 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Response, Path
+from pydantic import EmailStr
 from starlette import status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from typing import Annotated
 
+from app.users.auth import get_password_hash, verify_password, authenticate_user, create_access_token
 from app.users.repo import UserRepo
 from app.backend.db_depends import get_db
 from app.users.models import Users
@@ -26,9 +28,44 @@ async def get_user(db: Annotated[AsyncSession, Depends(get_db)],
 
 
 @router.post('/register')
-async def register(user_data: SCreateUser,
-                   db: Annotated[AsyncSession, Depends(get_db)]):
-    existing_user = await UserRepo.get_by_id()
+async def register_user(user_data: SCreateUser):
+    existing_user = await UserRepo.get_one_or_none(email=user_data.email)
+    if existing_user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
+                            detail='Email already used')
+    hashed_password = get_password_hash(user_data.password)
+    await UserRepo.add(email=user_data.email, hashed_password=hashed_password)
+    return {'status': status.HTTP_201_CREATED,
+            'transaction': 'user created'}
+
+
+@router.delete('/delete/{email}')
+async def delete_user(email: Annotated[EmailStr, Path(...)],
+                      password: str):
+    existing_user = await UserRepo.get_one_or_none(email=email)
+    if not existing_user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail='user not found')
+    if not verify_password(password, Users.hashed_password):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
+                            detail='password invalid')
+    await UserRepo.delete(email=email)
+    return {'status': status.HTTP_200_OK,
+            'transaction': 'user deleted'}
+
+
+@router.post('/login')
+async def login_user(response: Response, user_data: SCreateUser):
+    user = await authenticate_user(user_data.email, user_data.password)
+    if not user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
+    access_token = create_access_token({'sub': user.id})
+    response.set_cookie('booking_access_token', access_token, httponly=True)
+    return access_token
+
+
+
+
 
 
 

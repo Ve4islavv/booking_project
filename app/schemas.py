@@ -13,5 +13,5 @@ class SCreateBooking(BaseModel):
         from_attributes = True
 
 class SCreateUser(BaseModel):
-    username: EmailStr
+    email: EmailStr
     password: str
