@@ -10,8 +10,8 @@ class BaseRepo:
     model = None
 
     @classmethod
-    async def get_all(cls, db: AsyncSession, user_id: int = False):
-        if user_id:
+    async def get_all(cls, db: AsyncSession, user_id: int | None = None):
+        if user_id is not None:
             result = await db.scalars(select(cls.model).where(cls.model.user_id == user_id))
             return result.all()
         bookings = await db.scalars(select(cls.model))
@@ -36,11 +36,11 @@ class BaseRepo:
     @classmethod
     async def add(cls, **data):
         async with async_session_maker() as session:
-            query = insert(cls.model).values(**data).returning(cls.model.id)
+            query = insert(cls.model).values(**data)
             await session.execute(query)
             await session.commit()
 
-
+    @classmethod
     async def delete(cls, email: EmailStr):
         async with async_session_maker() as session:
             await session.execute(delete(cls.model).where(cls.model.email == email))

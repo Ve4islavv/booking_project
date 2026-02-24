@@ -7,6 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Annotated
 
 from app.users.auth import get_password_hash, verify_password, authenticate_user, create_access_token
+from app.users.dependencies import get_current_user
 from app.users.repo import UserRepo
 from app.backend.db_depends import get_db
 from app.users.models import Users
@@ -46,7 +47,7 @@ async def delete_user(email: Annotated[EmailStr, Path(...)],
     if not existing_user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail='user not found')
-    if not verify_password(password, Users.hashed_password):
+    if not verify_password(password, existing_user.hashed_password):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='password invalid')
     await UserRepo.delete(email=email)
@@ -59,9 +60,19 @@ async def login_user(response: Response, user_data: SCreateUser):
     user = await authenticate_user(user_data.email, user_data.password)
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
-    access_token = create_access_token({'sub': user.id})
+    access_token = create_access_token({'sub': str(user.id)})
     response.set_cookie('booking_access_token', access_token, httponly=True)
-    return access_token
+    return {'message': 'success login'}
+
+
+@router.post('/logout')
+async def logout_user(response: Response):
+    response.delete_cookie('booking_access_token')
+
+
+@router.get('/me')
+async def info_about_user(user: Annotated[Users, Depends(get_current_user)]):
+    return user
 
 
 
