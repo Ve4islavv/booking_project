@@ -1,13 +1,17 @@
 from datetime import date
 from fastapi import HTTPException
-from starlette import status
-from sqlalchemy import select, and_, or_, func, insert
+from fastapi.params import Depends
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.sql.annotation import Annotated
+from starlette import status
+from sqlalchemy import select, and_, or_, func, insert, delete
 
-from app.backend.db import engine, async_session_maker
+from app.backend.db import async_session_maker
 from app.repo.base import BaseRepo
 from app.booking.models import Booking
-from app.rooms.models import Rooms
+from app.hotels.rooms.models import Rooms
+from app.users.dependencies import get_current_user
+from app.users.models import Users
 
 
 class BookingRepo(BaseRepo):
@@ -55,10 +59,81 @@ class BookingRepo(BaseRepo):
 
 
             price = await session.scalar((select(Rooms.price).where(Rooms.id == room_id)))
-            new_booking = await session.execute(insert(Booking).values(room_id=room_id,
+            await session.execute(insert(Booking).values(room_id=room_id,
                                                          user_id=user_id,
                                                          date_from=date_from,
                                                          date_to=date_to,
                                                          price=price).returning(Booking))
             await session.commit()
+
+    @classmethod
+    async def get_user_bookings(cls, user_id: int):
+        query = (select(cls.model.room_id,
+                       cls.model.user_id,
+                       cls.model.date_from,
+                       cls.model.date_to,
+                       cls.model.price,
+                       cls.model.total_days,
+                       cls.model.total_cost,
+                       Rooms.image_id,
+                       Rooms.name,
+                       Rooms.description,
+                       Rooms.services
+                       )
+                .join(Rooms, Rooms.id == Booking.room_id)
+                 .where(Booking.user_id == user_id)
+                 .order_by(Booking.date_from.desc())
+                 )
+        async with async_session_maker() as session:
+            result = await session.execute(query)
+            bookings = result.all()
+
+            if not bookings:
+                print(f"✅ Бронирований не найдено")
+                return []
+
+            print(f"✅ Найдено бронирований: {len(bookings)}")
+
+            bookings_list = []
+            for booking in bookings:
+                services = booking[10]
+                if services is None:
+                    services = []
+                elif not isinstance(services, list):
+                    if isinstance(services, dict):
+                        services = list(services.values()) if services else []
+                    else:
+                        services = [str(services)]
+
+                bookings_list.append({
+                    "room_id": booking[0],
+                    "user_id": booking[1],
+                    "date_from": booking[2],
+                    "date_to": booking[3],
+                    "price": booking[4],
+                    "total_cost": booking[5],
+                    "total_days": booking[6],
+                    "image_id": booking[7],
+                    "name": booking[8],
+                    "description": booking[9],
+                    "services": services
+                })
+                print(f"  • {booking[8]}: {booking[5]} руб, {booking[6]} дней")
+
+            return bookings_list
+
+
+    @classmethod
+    async def delete_booking(cls, booking_id: int,
+                             user_id: int):
+        async with async_session_maker() as session:
+            query = delete(Booking).where(Booking.id == booking_id,
+                                          Booking.user_id == user_id)
+            result = await session.execute(query)
+            await session.commit()
+
+            if result.rowcount == 0:
+                return False
+            return True
+
 

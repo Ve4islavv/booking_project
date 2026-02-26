@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="output secretkey and private data">
-      <change afterPath="$PROJECT_DIR$/app/users/dependencies.py" afterDir="false" />
+    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="before replace dir rooms in hotels">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/booking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/booking/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/repo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/booking/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hotels/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hotels/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hotels/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/repo/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repo/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/rooms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/rooms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/rooms/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/rooms/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/dependencies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/users/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/routers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +48,9 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -76,12 +89,15 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/hotels/rooms" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/hotels" />
+      <recent name="$PROJECT_DIR$/app/hotels/rooms" />
       <recent name="$PROJECT_DIR$/app/repo" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/users" />
-      <recent name="$PROJECT_DIR$/rooms" />
-      <recent name="$PROJECT_DIR$/hotels" />
     </key>
   </component>
   <component name="RunManager">

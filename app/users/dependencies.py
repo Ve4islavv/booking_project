@@ -14,7 +14,7 @@ from app.users.repo import UserRepo
 def get_token(request: Request):
     token = request.cookies.get('booking_access_token')
     if not token:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZE,
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='token not found in cookies')
     return token
 

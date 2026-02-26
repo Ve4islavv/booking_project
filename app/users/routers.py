@@ -22,11 +22,6 @@ async def get_all_users(db: Annotated[AsyncSession, Depends(get_db)]):
     return await UserRepo.get_all(db)
 
 
-@router.get('{user_id}')
-async def get_user(db: Annotated[AsyncSession, Depends(get_db)],
-                   user_id: int):
-    return await UserRepo.get_by_id(db, user_id)
-
 
 @router.post('/register')
 async def register_user(user_data: SCreateUser):

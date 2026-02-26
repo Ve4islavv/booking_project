@@ -17,6 +17,6 @@ class Booking(Base):
     price = Column(Integer, nullable=False)
     total_cost = Column(Integer, Computed('(date_to - date_from) * price'))
     total_days = Column(Integer, Computed('(date_to - date_from)'))
-    room = relationship('app.rooms.models.Rooms', back_populates='bookings')
+    room = relationship('app.hotels.rooms.models.Rooms', back_populates='bookings')
     user = relationship('app.users.models.Users', back_populates='bookings')
 

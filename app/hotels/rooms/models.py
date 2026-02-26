@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, JSON, ForeignKey, Date, Computed
+from sqlalchemy import Column, Integer, String, JSON, ForeignKey
 from sqlalchemy.orm import relationship
 
 from app.backend.db import Base
@@ -7,7 +7,7 @@ from app.backend.db import Base
 class Rooms(Base):
     __tablename__ = 'rooms'
 
-    id = Column(Integer, index=True, primary_key=True)
+    id = Column(Integer, index=True, primary_key=True, autoincrement=True)
     hotel_id = Column(Integer, ForeignKey('hotels.id'))
     name  = Column(String, nullable=False)
     description = Column(String)
