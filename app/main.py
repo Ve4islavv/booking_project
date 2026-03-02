@@ -12,10 +12,6 @@ from app.pages.routers import router as router_page
 from app.images.router import router as router_image
 from fastapi.staticfiles import StaticFiles
 
-from fastapi_cache import FastAPICache
-from fastapi_cache.backends.redis import RedisBackend
-from fastapi_cache.decorator import cache
-import aioredis
 
 app = FastAPI()
 app.include_router(router_bookings)
@@ -36,22 +32,6 @@ app.add_middleware(CORSMiddleware,
                                   'Access-Control-Allow-Origin',
                                   'Authorization'])
 
-@asynccontextmanager
-async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    redis = aioredis.from_url("redis://localhost")
-    FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
-    yield
 
 
-app = FastAPI(lifespan=lifespan)
 
-
-@cache()
-async def get_cache():
-    return 1
-
-
-@app.get("/")
-@cache(expire=60)
-async def index():
-    return dict(hello="world")

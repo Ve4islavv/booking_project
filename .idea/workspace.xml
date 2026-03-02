@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="add booking endpoints">
-      <change afterPath="$PROJECT_DIR$/app/images/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/routers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/hotels.html" afterDir="false" />
+    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="add redis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/hotels/rooms/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/hotels/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
@@ -73,6 +69,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "FastAPI.FastAPIProject.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.redis.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -104,7 +101,31 @@
       <recent name="$PROJECT_DIR$/users" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.redis">
+    <configuration name="redis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FastAPIProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/lib/python3.14/site-packages/fastapi_cache/backends" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/lib/python3.14/site-packages/fastapi_cache/backends/redis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FastAPIProject" type="Python.FastAPI">
       <option name="file" value="$PROJECT_DIR$/main.py" />
       <module name="FastAPIProject" />
@@ -121,6 +142,11 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.redis" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -144,7 +170,7 @@
       <workItem from="1771497546523" duration="97000" />
       <workItem from="1771497673371" duration="3480000" />
       <workItem from="1771504990091" duration="665000" />
-      <workItem from="1772101369603" duration="15644000" />
+      <workItem from="1772101369603" duration="17680000" />
     </task>
     <task id="LOCAL-00001" summary="add alembic and create db">
       <option name="closed" value="true" />
@@ -202,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772101413189</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add redis">
+      <option name="closed" value="true" />
+      <created>1772457364041</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772457364041</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +260,10 @@
     <MESSAGE value="add auth" />
     <MESSAGE value="output secretkey and private data" />
     <MESSAGE value="add booking endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="add booking endpoints" />
+    <MESSAGE value="add redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redis" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FastAPIProject$redis.coverage" NAME="redis Coverage Results" MODIFIED="1772458113267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/lib/python3.14/site-packages/fastapi_cache/backends" />
   </component>
 </project>
