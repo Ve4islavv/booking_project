@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="before replace dir rooms in hotels">
+    <list default="true" id="3b67314a-93d8-49d6-a7dd-75315b69eed0" name="Changes" comment="add booking endpoints">
+      <change afterPath="$PROJECT_DIR$/app/images/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pages/routers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/hotels.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/booking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/booking/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/repo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/booking/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/routers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/hotels/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/hotels/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hotels/rooms/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/hotels/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repo/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repo/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/rooms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/rooms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/rooms/repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/repo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/rooms/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/hotels/rooms/routers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/routers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +23,7 @@
       <list>
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -45,6 +36,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Ve4islavv"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ve4islavv/booking_project.git",
+    "accountId": "4b1e76ce-0149-4dac-a813-7376b680a48b"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -64,30 +67,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;FastAPI.FastAPIProject.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "FastAPI.FastAPIProject.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/hotels/rooms" />
@@ -140,6 +144,7 @@
       <workItem from="1771497546523" duration="97000" />
       <workItem from="1771497673371" duration="3480000" />
       <workItem from="1771504990091" duration="665000" />
+      <workItem from="1772101369603" duration="15644000" />
     </task>
     <task id="LOCAL-00001" summary="add alembic and create db">
       <option name="closed" value="true" />
@@ -189,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771928806492</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add booking endpoints">
+      <option name="closed" value="true" />
+      <created>1772101413189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772101413189</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +225,7 @@
     <MESSAGE value="before auth" />
     <MESSAGE value="add auth" />
     <MESSAGE value="output secretkey and private data" />
-    <option name="LAST_COMMIT_MESSAGE" value="output secretkey and private data" />
+    <MESSAGE value="add booking endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="add booking endpoints" />
   </component>
 </project>

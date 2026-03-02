@@ -1,13 +1,13 @@
 from datetime import date
 
-from fastapi import Depends, Path, HTTPException
+from fastapi import Depends, Path, HTTPException, APIRouter
 from typing import Annotated
 from app.hotels.repo import HotelsRepo
 from app.hotels.rooms.repo import RoomsRepo
-from app.hotels.routers import router
 from starlette import status
 from app.schemas import SCreateRoom
 
+router = APIRouter(prefix='/hotels', tags=['rooms'])
 
 @router.get('/{hotel_id}/rooms')
 async def get_all_rooms(hotel_id: int,
@@ -37,6 +37,8 @@ async def create_new_room(room: SCreateRoom,
                         services=room.services,
                         quantity=room.quantity,
                         image_id=room.image_id)
+
+
 
 
 
